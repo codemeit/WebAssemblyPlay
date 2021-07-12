@@ -1,0 +1,26 @@
+{
+  "name": "playas",
+  "version": "1.0.0",
+  "description": "test",
+  "main": "index.js",
+  "scripts": {
+    "lite": "lite-server --port 7777",
+    "start": "npm run lite",
+    "asbuild:untouched": "asc assembly/index.ts --target debug",
+    "asbuild:optimized": "asc assembly/index.ts --target release",
+    "asbuild": "npm run asbuild:untouched && npm run asbuild:optimized"
+  },
+  "repository": {
+    "type": "git",
+    "url": "."
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@assemblyscript/loader": "^0.19.6"
+  },
+  "devDependencies": {
+    "assemblyscript": "^0.19.6",
+    "lite-server": "^2.6.1"
+  }
+}
